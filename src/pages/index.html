@@ -4,12 +4,31 @@
   <meta charset="UTF-8">
   <title>Gulp v4.1</title>
   @@include('../blocks/favicon/favicon.html')
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="preload" href="fonts/AvenirNextCyr-Regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/AvenirNextCyr-Bold.woff2" as="font" crossorigin>
   <script src="js/vendor.js"></script>
   <script src="js/general.js" defer></script>
   <link rel="stylesheet" href="css/main.css">
 
 </head>
-<body>
+<body class="page">
+  <header></header>
+  <main></main>
 
+  <footer class="footer">
+    <a class="footer__logo logo" href="index.html">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#logo__icon"></use>
+      </svg>
+    </a>
+    <ul class="footer__list">
+      <li class="footer__item"><a class="footer__link" href="#">Politique de confidélité</a></li>
+      <li class="footer__item"><a class="footer__link" href="#">Mentions Légales</a></li>
+    </ul>
+    <div class="footer__wrap">
+      <p class="footer__copyright">Copyright © 2020 Alion | All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
