@@ -2163,10 +2163,12 @@ a {
   padding-left: 0;
   list-style: none;
   display: flex;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center; }
 
-.footer__item:last-child {
-  margin-left: 35px; }
+.footer__item:not(:last-child) {
+  margin-right: 35px; }
 
 .footer__link {
   position: relative;
