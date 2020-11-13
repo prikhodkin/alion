@@ -1,12 +1,5 @@
-import Turbolinks from "turbolinks";
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
-
-import Tabs from "%modules%/tabs/tabs"
-import {$, $$} from "./util";
-
-
-Turbolinks.start();
 
 const application = Application.start()
 const context = require.context("./controllers", true, /\.js$/);
@@ -25,3 +18,18 @@ toggleNav.addEventListener("click", function () {
 });
 
 
+function initMap() {
+  var coordinates = { lat: 48.828250, lng: 2.370778 },
+  image = 'img/pointer-map.svg',
+    map = new google.maps.Map(document.querySelector(".contact__map"), {
+      center: { lat:   48.8282377, lng:2.361531 },
+      zoom: 16,
+    }),
+    marker = new google.maps.Marker({
+      position: coordinates,
+      map: map,
+      icon: image
+    });
+}
+
+initMap();
