@@ -38,7 +38,7 @@
 
     &:hover {
       color: #ffffff;
-      background-color:  #49a3fe;
+      background-color: #49a3fe;
     }
   }
 }
@@ -47,8 +47,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 35px;
   width: 35px;
+  min-width: 35px;
   height: 35px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
@@ -62,9 +62,13 @@
 
 @media (min-width: 1200px) {
   .button {
-    font-size: 14px;
     padding-top: 11px;
     padding-bottom: 8px;
+    font-size: 14px;
+
+    & span {
+      margin-left: 23px;
+    }
   }
 
   .button__icon {
