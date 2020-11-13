@@ -11,3 +11,51 @@
     transition: opacity 1.2s;
   }
 }
+
+.tabs__list {
+  @include list-reset;
+  margin-bottom: 35px;
+}
+
+.tabs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #49a3fe;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &--active {
+    color: #ffffff;
+    background-color: #49a3fe;
+  }
+}
+
+@media (min-width: 768px) {
+  .tabs__list {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .tabs__item {
+    height: 54px;
+    padding: 0 25px;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}

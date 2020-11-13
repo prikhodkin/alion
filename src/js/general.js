@@ -4,6 +4,7 @@ import { definitionsFromContext } from "stimulus/webpack-helpers"
 const application = Application.start()
 const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
+import Tabs from "%modules%/tabs/tabs";
 
 //Открыть меню
 let toggleNav = document.querySelector(".header__toggle");
@@ -16,6 +17,10 @@ toggleNav.addEventListener("click", function () {
     header.classList.add("header--active");
   }
 });
+
+const tabArr = document.querySelectorAll(`[data-tabs]`);
+
+tabArr.forEach((item) => new Tabs(item));
 
 
 function initMap() {
