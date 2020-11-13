@@ -129,6 +129,16 @@
 
       .integrations__box {
         min-width: 535px;
+        margin-right: -55px;
+        position: relative;
+        z-index: 100;
+
+        .integrations__text {
+          &--payment {
+            max-width: 410px;
+            margin-left: auto;
+          }
+        }
       }
     }
   }
