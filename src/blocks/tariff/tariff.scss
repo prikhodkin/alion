@@ -1,0 +1,182 @@
+.tariff {
+  background-image: url("../../img/tariff__background.jpg");
+  background-repeat: no-repeat;
+  background-position: -516px -5px;
+  background-size: cover;
+}
+
+.tariff__wrap {
+  padding: 30px 20px;
+  padding-bottom: 102px;
+}
+
+.tariff__title {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tariff__list {
+  @include list-reset;
+}
+
+.tariff__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 237px;
+  padding: 0 20px;
+  padding-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &--base {
+    background-color: rgba(101, 170, 251, 0.5);
+    border: none;
+  }
+}
+
+.tariff__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -20px;
+  margin-bottom: 25px;
+  padding: 0 20px;
+  padding-top: 18px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #65aafb;
+
+
+  &--base {
+    background-color: #6fb1ff;
+  }
+}
+
+.tariff__cost {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #ffffff;
+
+  &--line {
+    text-decoration-line: line-through;
+  }
+}
+
+.tariff__text {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tariff__button {
+
+  height: 44px;
+  margin-top: auto;
+}
+
+.tariff__inner {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% + 6px);
+  padding: 9px 26px 12px 20px;
+  background-color: #3883dc;
+}
+
+.tariff__desc {
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+.tariff__link {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: #ffffff;
+  border-bottom: 1px dashed #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .tariff {
+    background-position: 0 0;
+  }
+
+  .tariff__wrap {
+    padding-top: 43px;
+    padding-bottom: 90px;
+
+    @include page-wrapper;
+  }
+
+  .tariff__title {
+    margin-bottom: 46px;
+  }
+
+  .tariff__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tariff__item {
+    width: 306px;
+    max-width: 306px;
+    min-height: 313px;
+    padding: 0 25px;
+    padding-bottom: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:not(:first-child) {
+      margin-left: 60px;
+    }
+  }
+
+  .tariff__name {
+    min-height: 56px;
+    margin: 0 -25px;
+    margin-bottom: 25px;
+    padding: 5px 30px;
+  }
+
+  .tariff__cost {
+    margin-bottom: 18px;
+    font-size: 35px;
+    line-height: 43px;
+  }
+
+  .tariff__text {
+    margin-bottom: 10px;
+  }
+
+  .tariff__button {
+    height: 51px;
+  }
+
+  .tariff__inner {
+    right: 0;
+    left: inherit;
+    width: calc(100% - 1px);
+    padding-left: 26px;
+  }
+}
