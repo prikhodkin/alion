@@ -5,8 +5,8 @@
 
   &::before {
     @include pseudo;
-    background-image: url("../../img/Rectangle.svg");
     width: 100%;
+    background-image: url("../../img/Rectangle.svg");
   }
 }
 
