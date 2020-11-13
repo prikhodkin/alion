@@ -1,5 +1,7 @@
 .integrations {
   background-image: url("../../img/circle2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 100px;
 }
 
 .integrations__wrap {
@@ -13,6 +15,12 @@
   text-align: center;
 }
 
+.integrations__box {
+  &--payment {
+    margin-top: -85px;
+  }
+}
+
 .integrations__list {
   @include list-reset;
 }
@@ -21,8 +29,12 @@
   display: flex;
   flex-direction: column;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  &--payment {
+    margin-bottom: 4px;
+  }
+
+  &--chats {
+    margin-bottom: 35px;
   }
 }
 
@@ -57,10 +69,18 @@
   order: -1;
   margin: 0 -20px;
   margin-bottom: 25px;
+
+  &--delivery {
+    margin-bottom: 20px;
+  }
 }
 
 .integrations__text {
   margin-bottom: 30px;
   font-size: 12px;
   line-height: 141.02%;
+}
+
+@media (min-width: 1200px) {
+
 }
