@@ -13,6 +13,29 @@
     transform: inherit;
     transition: all 0.3s;
   }
+
+  &--active .header__toggle {
+
+    & .burger__inner {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      top: 50%;
+      background-color: #000000;
+      transform: translateY(-50%);
+      transition: all 0.3s;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .header__wrap {
