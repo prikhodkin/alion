@@ -638,10 +638,56 @@
     </div>
   </footer>
   <section class="modal">
-    <h2 class="modal__title title">Formulaire</h2>
-    <form class="modal__form form" action="#">
-
-    </form>
+    <div class="modal__box">
+      <h2 class="modal__title title">Formulaire</h2>
+      <form class="modal__form form" action="#">
+        <fieldset class="form__wrap">
+          <div class="form__box field ">
+            <input class="field__input " type="text" id="form-name" name="name" placeholder="Nom et Prénom">
+            <label class="field__label" for="form-name">
+              <svg class="field__icon">
+                <use xlink:href="img/sprites/sprite.svg#icon__user"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form__box field ">
+            <input class="field__input " type="password" id="form-password" name="password" placeholder="Votre prenom">
+            <label class="field__label" for="form-password">
+              <svg class="field__icon">
+                <use xlink:href="img/sprites/sprite.svg#icon__user"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form__box field ">
+            <input class="field__input " type="text" id="form-activity" name="activity" placeholder="Domaine d'activité ">
+            <label class="field__label" for="form-activity">
+              <svg class="field__icon">
+                <use xlink:href="img/sprites/sprite.svg#icon__briefcase"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form__box field ">
+            <input class="field__input " type="tel" id="form-number" name="number" placeholder="Numéro de tel">
+            <label class="field__label" for="form-number">
+              <svg class="field__icon">
+                <use xlink:href="img/sprites/sprite.svg#icon__phone"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form__box field ">
+            <input class="field__input " type="email" id="form-email" name="email" placeholder="yourmail@gmail.com">
+            <label class="field__label" for="form-email">
+              <svg class="field__icon">
+                <use xlink:href="img/sprites/sprite.svg#icon__at"></use>
+              </svg>
+            </label>
+          </div>
+        </fieldset>
+        <button class="form__button button" type="submit"></button>
+      </form>
+    </div>
+    <div class="modal__img"></div>
+    <button class="modal__close"></button>
   </section>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzzhXIcTFu20j716t6pPG2CahRgI9uWOM"></script>
   <script src="js/vendor.js"></script>

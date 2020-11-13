@@ -19,9 +19,9 @@
 .footer__list {
   @include list-reset;
   display: flex;
-  margin-bottom: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .footer__item {
