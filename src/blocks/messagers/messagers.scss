@@ -1,0 +1,45 @@
+.messagers {
+  @include list-reset;
+  display: flex;
+}
+
+.messagers__item {
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.messagers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0.5px solid #039be5;
+  border-radius: 50%;
+
+  &--whatsapp {
+    border: 0.5px solid #4caf50;
+  }
+
+  &--viber {
+    border: 0.5px solid #665cac;
+  }
+}
+
+.messagers__icon {
+  width: 17px;
+  height: 17px;
+
+  &--telegram {
+    fill: #039be5;
+  }
+
+  &--whatsapp {
+    fill: #4caf50;
+  }
+
+  &--viber {
+    fill: #665cac;
+  }
+}

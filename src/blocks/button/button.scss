@@ -1,3 +1,55 @@
 .button {
-  background-color: aqua;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 0;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: $main-color;
+  box-shadow: 0 3px 0 #5292d2;
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+
+  &:hover {
+    background-color: #64b1ff;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  & span {
+    margin-left: 45px;
+  }
+
+  &--bord {
+    justify-content: center;
+    padding: 20px;
+    color: $main-color;
+    background-color: transparent;
+    border: 1px solid #49a3fe;
+    box-shadow: none;
+  }
+}
+
+.button__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  & svg {
+    width: 15px;
+    height: 15px;
+    fill: #ffffff;
+  }
 }

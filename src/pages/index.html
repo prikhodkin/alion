@@ -13,8 +13,88 @@
 
 </head>
 <body class="page">
-  <header></header>
-  <main></main>
+  <header class="header">
+    <div class="header__wrap">
+      <a class="header__logo logo">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#logo__icon"></use>
+        </svg>
+      </a>
+      <button class="header__toggle burger">
+        <span class="burger__inner"><span class="visually-hidden">Открыть меню</span></span>
+      </button>
+      <div class="header__box">
+        <div class="header__inner">
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#" >Accueil</a></li>
+              <li class="nav__item"><a class="nav__link" href="#" >Nos solutions</a></li>
+              <li class="nav__item"><a class="nav__link" href="#" >Intégration</a></li>
+              <li class="nav__item"><a class="nav__link" href="#" >Retour d'information</a></li>
+            </ul>
+          </nav>
+          <a class="header__button button button--bord" href="#" >obtenir un devis</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="contact">
+      <div class="contact__map"></div>
+      <div class="contact__box">
+        <h2 class="contact__title title">Nos contacts</h2>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <p class="contact__name">Téléphones</p>
+            <ul class="contact__sublist">
+              <li class="contact__subitem"><a class="contact__tel" href="tel:+33661317808">+33 6 61 31 78 08</a></li>
+              <li class="contact__subitem"><a class="contact__tel" href="tel:+33156370939">+33 1 56 37 09 39</a></li>
+            </ul>
+          </li>
+          <li class="contact__item">
+            <p class="contact__name">Messagers</p>
+            <ul class="contact__messagers messagers">
+              <li class="messagers__item">
+                <a class="messagers__link messagers__link--telegram" href="#">
+                  <svg class="messagers__icon messagers__icon--telegram">
+                    <use xlink:href="img/sprites/sprite.svg#telegram__icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="messagers__item">
+                <a class="messagers__link messagers__link--whatsapp" href="#">
+                  <svg class="messagers__icon messagers__icon--whatsapp">
+                    <use xlink:href="img/sprites/sprite.svg#whatsapp__icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="messagers__item">
+                <a class="messagers__link messagers__link--viber" href="#">
+                  <svg class="messagers__icon messagers__icon--viber">
+                    <use xlink:href="img/sprites/sprite.svg#viber__icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="contact__item">
+            <p class="contact__name">Adresse</p>
+            <p class="contact__text">75013 Paris, 110 rue de Patay</p>
+            <p class="contact__desc">Heures d'ouverture –  10:00 - 18:00 </p>
+            <p class="contact__desc">On collecte vos candidatures 24/7 </p>
+          </li>
+        </ul>
+        <a class="contact__button button" href="#" >
+          <div class="button__icon">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#letter__icon"></use>
+            </svg>
+          </div>
+          <span>Obtenir un devis</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <a class="footer__logo logo" href="index.html">
