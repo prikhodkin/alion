@@ -35,6 +35,11 @@
     background-color: transparent;
     border: 1px solid #49a3fe;
     box-shadow: none;
+
+    &:hover {
+      color: #ffffff;
+      background-color:  #49a3fe;
+    }
   }
 }
 
