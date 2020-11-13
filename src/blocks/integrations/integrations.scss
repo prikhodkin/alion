@@ -56,6 +56,11 @@
   height: 29.2vw;
   padding: 10px;
   border: 1px solid #e6e6e6;
+
+  &:hover {
+    background-color: #ffffff;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+  }
 }
 
 .integrations__icon {
@@ -91,11 +96,11 @@
   }
 
   .integrations__title {
+    margin-bottom: 100px;
     font-size: 35px;
     line-height: 43px;
     text-align: center;
     color: #252525;
-    margin-bottom: 100px;
   }
 
   .integrations__item {
@@ -135,9 +140,14 @@
   }
 
   .integrations__name {
+    margin-bottom: 48px;
     font-size: 30px;
     line-height: 37px;
-    margin-bottom: 48px;
+
+    &--payment {
+      font-size: 35px;
+      line-height: 43px;
+    }
   }
 
   .integrations__sublist {
@@ -149,17 +159,26 @@
 
   .integrations__subitem {
     height: inherit;
+
+    &:hover {
+      position: relative;
+      z-index: 100;
+      background-color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+      transform: skew(2);
+    }
   }
 
   .integrations__img {
-    margin: 0;
-    min-width: 869px;
     width: 869px;
+    min-width: 869px;
+    margin: 0;
 
     &--chats {
-      margin-left: -100px;
-      min-width: 869px;
       width: 869px;
+      min-width: 869px;
+      margin-left: -100px;
     }
 
     &--payment {
@@ -167,4 +186,21 @@
     }
   }
 
+  .integrations__text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 132.02%;
+
+    &--payment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 408px;
+      padding: 38px 32px 39px 18px;
+      text-align: right;
+      background-color: #ffffff;
+      border-right: 3px solid #4299ff;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    }
+  }
 }

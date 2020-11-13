@@ -8,9 +8,11 @@
   position: relative;
   height: 626px;
   background-repeat: no-repeat;
+
   a,
   button,
-  div.gm-bundled-control div.gmnoprint, div.gm-svpc {
+  div.gm-bundled-control div.gmnoprint,
+  div.gm-svpc {
     display: none !important;
   }
 
@@ -32,9 +34,9 @@
   width: 100%;
   padding: 0 20px;
   padding-top: 46px;
-  background-position: -200px -50px;
-  background-repeat: no-repeat;
   background-image: url("../../img/map_bg@mobile.png");
+  background-repeat: no-repeat;
+  background-position: -200px -50px;
 }
 
 .contact__title {
