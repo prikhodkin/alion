@@ -20,11 +20,13 @@
   @include list-reset;
   display: flex;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer__item {
-  &:last-child {
-    margin-left: 35px;
+  &:not(:last-child) {
+    margin-right: 35px;
   }
 }
 
