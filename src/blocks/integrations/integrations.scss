@@ -2,6 +2,7 @@
   background-image: url("../../img/circle2.svg");
   background-repeat: no-repeat;
   background-position: 0 100px;
+  background-size: contain;
 }
 
 .integrations__wrap {
@@ -82,5 +83,60 @@
 }
 
 @media (min-width: 1200px) {
+  .integrations__wrap {
+    @include page-wrapper;
+    padding-top: 75px;
+  }
+
+  .integrations__title {
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+    color: #252525;
+    margin-bottom: 100px;
+  }
+
+  .integrations__item {
+    flex-direction: row;
+  }
+
+  .integrations__box {
+    &--chats {
+      margin-left: -140px;
+    }
+  }
+
+  .integrations__name {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 48px;
+  }
+
+  .integrations__sublist {
+    @include list-reset;
+    display: grid;
+    grid-template-columns: repeat(3, 133px);
+    grid-template-rows: repeat(3, 133px);
+  }
+
+  .integrations__subitem {
+    height: inherit;
+  }
+
+  .integrations__img {
+    margin: 0;
+    min-width: 869px;
+    width: 869px;
+
+    &--chats {
+      margin-left: -100px;
+      min-width: 869px;
+      width: 869px;
+    }
+
+    &--payment {
+      order: inherit;
+    }
+  }
 
 }
