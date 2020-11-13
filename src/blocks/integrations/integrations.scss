@@ -176,7 +176,8 @@
       background-color: #ffffff;
       border: none;
       box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
-      transform: skew(2);
+      transform: scale(1.2);
+      transition: all 0.3s;
     }
   }
 
