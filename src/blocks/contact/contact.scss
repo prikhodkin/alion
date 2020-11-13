@@ -8,8 +8,11 @@
   position: relative;
   height: 626px;
   background-repeat: no-repeat;
-  //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  //filter: grayscale(100%);
+  a,
+  button,
+  div.gm-bundled-control div.gmnoprint, div.gm-svpc {
+    display: none !important;
+  }
 
   &::before {
     content: "";
