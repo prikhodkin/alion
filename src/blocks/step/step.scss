@@ -1,0 +1,45 @@
+.step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  min-width: 46px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+  background: #4299ff;
+}
+
+.step__top {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.step__name {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 54px;
+  padding: 0 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4299ff;
+  background: #ffffff;
+}
+
+.step__text {
+  font-size: 12px;
+  line-height: 135.02%;
+  color: #000000;
+}
+
+
+@media (min-width: 768px) {
+  .step__text {
+    font-size: 13px;
+    line-height: 135.02%;
+  }
+}
