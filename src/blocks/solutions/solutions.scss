@@ -106,12 +106,17 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: -10px;
+    margin-bottom: 27px;
     margin-left: -10px;
   }
 
   .solutions__step {
     width: calc(50% - 20px);
     margin: 10px;
+
+    &:not(:last-child) {
+      margin: 10px;
+    }
   }
 
   .solutions__desc {

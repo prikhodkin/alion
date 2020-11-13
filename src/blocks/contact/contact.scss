@@ -29,7 +29,9 @@
   width: 100%;
   padding: 0 20px;
   padding-top: 46px;
-  background-color: rgba(#ffffff, 0.9);
+  background-position: -200px -50px;
+  background-repeat: no-repeat;
+  background-image: url("../../img/map_bg@mobile.png");
 }
 
 .contact__title {
@@ -92,6 +94,11 @@
 @media (min-width: 768px) {
   .contact__button {
     width: 280px;
+  }
+
+  .contact__box {
+    background-image: url("../../img/mab_bg@desktop.png");
+    background-position: -200px -100px;
   }
 }
 
@@ -197,6 +204,7 @@
     padding-top: 0;
     padding-bottom: 0;
     padding-left: calc(50% - 585px);
+    background-position: center right;
   }
 
   .contact__map {
