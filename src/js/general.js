@@ -5,6 +5,7 @@ const application = Application.start()
 const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
 import Tabs from "%modules%/tabs/tabs";
+import WOW from "wow.js/dist/wow.min"
 
 //Открыть меню
 let toggleNav = document.querySelector(".header__toggle");
@@ -22,7 +23,7 @@ const tabArr = document.querySelectorAll(`[data-tabs]`);
 
 tabArr.forEach((item) => new Tabs(item));
 
-
+new WOW().init();
 function initMap() {
   var coordinates = { lat: 48.828250, lng: 2.370778 },
   image = 'img/pointer-map.svg',

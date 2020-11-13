@@ -89,8 +89,10 @@
 
 @media (min-width: 1200px) {
   .integrations__wrap {
-    @include page-wrapper;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 75px;
+    overflow: hidden;
   }
 
   .integrations__title {
@@ -103,6 +105,42 @@
 
   .integrations__item {
     flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    &:first-child {
+      @include page-wrapper;
+      z-index: 100;
+    }
+
+    &:nth-child(3) {
+      padding-right: calc(50% - 585px);
+      margin-top: -100px;
+
+      .integrations__box {
+        min-width: 545px;
+        margin-left: -120px;
+      }
+    }
+    &:nth-child(2) {
+      margin-top: -100px;
+      justify-content: space-between;
+      padding-left: calc(50% - 585px);
+
+      .integrations__box {
+        min-width: 535px;
+        margin-right: -55px;
+        position: relative;
+        z-index: 100;
+
+        .integrations__text {
+          &--payment {
+            max-width: 410px;
+            margin-left: auto;
+          }
+        }
+      }
+    }
   }
 
   .integrations__box {
