@@ -1,0 +1,38 @@
+.text-block {
+  padding: 100px 20px 90px 20px;
+
+  p {
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
+
+
+    color: #000000;
+
+    & + p {
+      margin-top: 25px;
+    }
+  }
+
+  a {
+    color: #2e84e8;
+    text-decoration: underline;
+  }
+
+  b {
+    font-weight: 700;
+  }
+}
+
+.text-block__title {
+  font-size: 35px;
+  line-height: 20px;
+  margin-bottom: 46px;
+}
+
+@media (min-width: 1200px) {
+  .text-block {
+    padding-top: 175px;
+    @include page-wrapper;
+  }
+}

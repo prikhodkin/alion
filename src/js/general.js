@@ -30,7 +30,7 @@ toggleNav.addEventListener("click", function () {
 const tabArr = document.querySelectorAll(`[data-tabs]`);
 
 tabArr.forEach((item) => new Tabs(item));
-
+const maps = document.querySelector(".contact__map");
 new WOW().init();
 function initMap() {
   var coordinates = { lat: 48.828250, lng: 2.370778 },
@@ -206,7 +206,10 @@ function initMap() {
     });
 }
 
-initMap();
+if(maps) {
+  initMap();
+}
+
 
 
 var swiper = new Swiper('.swiper-container', {
@@ -255,3 +258,8 @@ $(".form").submit(function() { //Change
 });
 
 
+$("a[href^='#']").click(function(){
+  var _href = $(this).attr("href");
+  $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+  return false;
+});
