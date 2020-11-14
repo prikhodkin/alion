@@ -6,6 +6,14 @@ const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
 import Tabs from "%modules%/tabs/tabs";
 import WOW from "wow.js/dist/wow.min"
+import IMask from 'imask';
+import {Popup, PopupThanks } from "%modules%/modal/modal";
+import $ from "jquery";
+global.jQuery = $;
+const popups = document.querySelectorAll('.popup');
+popups.forEach(function (popup) {
+  new Popup(popup);
+});
 
 //Открыть меню
 let toggleNav = document.querySelector(".header__toggle");
@@ -221,3 +229,29 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+
+const phones = document.querySelectorAll(`.field__input--phone`);
+const phoneOption = {
+  mask: '+{33} (0) 00-00-00-00'
+}
+
+phones.forEach((item) => IMask(item, phoneOption));
+const thx = document.querySelector(`.popup--thx`);
+$(".form").submit(function() { //Change
+  var th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "vendor/mail.php", //Change
+    data: th.serialize()
+  }).done(function() {
+    new PopupThanks(thx).openPopup();
+    setTimeout(function() {
+      // Done Functions
+      th.trigger("reset");
+    }, 1000);
+  });
+  return false;
+});
+
+

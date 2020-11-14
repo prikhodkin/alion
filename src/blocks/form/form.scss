@@ -11,10 +11,12 @@
   border: none;
 }
 
-.form__box {}
-
 .form__button {
   width: 100%;
   border: none;
+
+  span {
+    margin-left: 19px;
+  }
 }
 

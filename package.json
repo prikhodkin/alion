@@ -63,6 +63,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "hc-sticky": "^2.2.3",
+    "imask": "^6.0.5",
     "jquery": "^3.5.1",
     "slick-carousel": "^1.8.1",
     "stimulus": "^1.1.1",
