@@ -1,6 +1,6 @@
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
-
+import Swiper from 'swiper/bundle';
 const application = Application.start()
 const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
@@ -199,3 +199,25 @@ function initMap() {
 }
 
 initMap();
+
+
+var swiper = new Swiper('.swiper-container', {
+  effect: 'fade',
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<div class="' + className + '"><span class="bullet" ></span><span>' + `${(index < 9) ? '0' : ''}`  + (index + 1) + '</span></div>';
+    },
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

@@ -1,9 +1,11 @@
 .header {
-  // position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
+  min-height: 86px;
+  background: linear-gradient(180deg, #ffffff 10%, rgba(255, 255, 255, 0) 100%);
 
   &--active {
     background-color: #ffffff;
@@ -87,6 +89,11 @@
 }
 
 @media (min-width: 1200px) {
+  .header {
+    z-index: 110;
+    background: unset;
+  }
+
   .header__wrap {
     @include page-wrapper;
     padding-top: 30px;
