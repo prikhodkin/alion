@@ -25,7 +25,7 @@
   }
 
   & span {
-    margin-left: 45px;
+    margin-left: 20%;
   }
 
   &--bord {
@@ -73,6 +73,14 @@
     width: 15px;
     height: 15px;
     fill: #ffffff;
+  }
+}
+
+@media (max-width: 319px) {
+  .button {
+    & span {
+      margin-left: auto;
+    }
   }
 }
 
