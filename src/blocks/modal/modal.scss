@@ -1,0 +1,80 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100vh;
+  padding: 60px 20px;
+  padding-top: 75px;
+  background-color: #4a4a4a;
+  // display: none;
+}
+
+.modal__box {
+  padding: 26px 26px 34px 24px;
+  background-color: #ffffff;
+}
+
+.modal__img {
+  padding-bottom: 53%;
+  background-image: url("../../img/modern-hobbies-and-applications@mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal__title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  transform: translateX(-50%);
+
+  & svg {
+    width: 100%;
+    height: 100%;
+    fill: #777777;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .modal {
+    flex-direction: row;
+    max-width: 845px;
+    height: inherit;
+    background-color: transparent;
+  }
+
+  .modal__box {
+    width: 50%;
+    padding: 40px 70px 60px 58px;
+  }
+
+  .modal__title {
+    margin-bottom: 45px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .modal__form {}
+
+  .modal__img {
+    width: 50%;
+    background-image: url("../../img/modern-hobbies-and-applications.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
