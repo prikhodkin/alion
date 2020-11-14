@@ -72,6 +72,7 @@
 }
 
 .integrations__img {
+  position: relative;
   order: -1;
   margin: 0 -20px;
   margin-bottom: 25px;
@@ -118,6 +119,8 @@
       padding-right: calc(50% - 585px);
 
       .integrations__box {
+        position: relative;
+        z-index: 100;
         min-width: 545px;
         margin-left: -120px;
       }
@@ -128,13 +131,44 @@
       margin-top: -100px;
       padding-left: calc(50% - 585px);
 
+      .integrations__img {
+        margin-left: auto;
+      }
+
       .integrations__box {
-        position: relative;
+        position: absolute;
+        right: 650px;
         z-index: 100;
         min-width: 535px;
-        margin-right: -55px;
 
         .integrations__text {
+          position: relative;
+
+          &::before {
+            @include pseudo;
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            width: 9px;
+            min-width: 9px;
+            height: 9px;
+            margin-bottom: 0;
+            background: #4299ff;
+            border-radius: 50%;
+            transform: translateY(-50%);
+          }
+
+          &::after {
+            @include pseudo;
+            position: absolute;
+            top: -15px;
+            right: 5px;
+            width: 430px;
+            height: 1px;
+            border-bottom: 2px dashed #4299ff;
+            transform: translateX(100%) rotate(-19.1deg);
+          }
+
           &--payment {
             max-width: 410px;
             margin-left: auto;
@@ -213,6 +247,50 @@
       background-color: #ffffff;
       border-right: 3px solid #4299ff;
       box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .integrations__item {
+    &:nth-child(2) {
+      .integrations__box {
+        right: 770px;
+
+        .integrations__text {
+          &::after {
+            width: 545px;
+            transform: translateX(100%) rotate(-15.1deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1900px) {
+  .integrations__item {
+    &:nth-child(2) {
+      .integrations__box {
+        position: relative;
+        right: unset;
+
+        .integrations__text {
+          &::after {
+            top: -14px;
+            width: 776px;
+            transform: translateX(100%) rotate(-10.5deg);
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .integrations__box {
+        max-width: 544px;
+        margin-left: auto;
+      }
     }
   }
 }

@@ -25,14 +25,15 @@
 }
 
 .text-block__title {
+  margin-bottom: 46px;
   font-size: 35px;
   line-height: 20px;
-  margin-bottom: 46px;
 }
 
 @media (min-width: 1200px) {
   .text-block {
     padding-top: 175px;
+
     @include page-wrapper;
   }
 }

@@ -1,0 +1,91 @@
+.pin {
+  @include pseudo;
+  position: absolute;
+  top: 30%;
+  right: 22%;
+  width: 47px;
+  height: 47px;
+}
+
+.pin__circle {
+  @include pseudo;
+  position: absolute;
+  background-color: #4299ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  &--small {
+    width: 17px;
+    height: 17px;
+    animation: show-circle-small 3s ease-in-out infinite;
+  }
+
+  &--middle {
+    width: 31px;
+    height: 31px;
+    background: #4299ff;
+    opacity: 0.4;
+    transition: all 0.3s;
+    animation: show-circle-mid 2s ease-out infinite;
+  }
+
+  &--big {
+    width: 47px;
+    height: 47px;
+    background: #4299ff;
+    opacity: 0.25;
+    transition: all 0.3s;
+    animation: show-circle 3s ease-out infinite;
+  }
+}
+
+@keyframes show-circle-small {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  50% {
+    width: 17px;
+    height: 17px;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes show-circle {
+  0% {
+    width: 17px;
+    height: 17px;
+  }
+
+  50% {
+    width: 47px;
+    height: 47px;
+  }
+
+  100% {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@keyframes show-circle-mid {
+  0% {
+    width: 17px;
+    height: 17px;
+  }
+
+  50% {
+    width: 31px;
+    height: 31px;
+  }
+
+  100% {
+    width: 17px;
+    height: 17px;
+  }
+}
