@@ -1,37 +1,39 @@
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
 import Swiper from 'swiper/bundle';
-const application = Application.start()
-const context = require.context("./controllers", true, /\.js$/);
-application.load(definitionsFromContext(context));
 import Tabs from "%modules%/tabs/tabs";
 import WOW from "wow.js/dist/wow.min"
 import IMask from 'imask';
 import {Popup, PopupThanks } from "%modules%/modal/modal";
 import $ from "jquery";
 global.jQuery = $;
-const popups = document.querySelectorAll('.popup');
+
+const popups = document.querySelectorAll(`.popup`);
+const thx = document.querySelector(`.popup--thx`);
+const toggleNav = document.querySelector(`.header__toggle`);
+const header = document.querySelector(`.header`);
+const tabArr = document.querySelectorAll(`[data-tabs]`);
+const phones = document.querySelectorAll(`.field__input--phone`);
+const maps = document.querySelector(".contact__map");
+const phoneOption = {
+  mask: '+{33} (0) 00-00-00-00'
+}
+
+// Инициализация библиотеки анимации
+new WOW().init();
+
+// Инициализация попапов
 popups.forEach(function (popup) {
   new Popup(popup);
 });
 
-//Открыть меню
-let toggleNav = document.querySelector(".header__toggle");
-let header = document.querySelector(".header");
-
-toggleNav.addEventListener("click", function () {
-  if (header.classList.contains("header--active")) {
-    header.classList.remove("header--active");
-  } else {
-    header.classList.add("header--active");
-  }
+// Меню
+toggleNav.addEventListener("click",  () => {
+  header.classList.toggle(`header--active`)
 });
 
-const tabArr = document.querySelectorAll(`[data-tabs]`);
-
+// Инициализация табов
 tabArr.forEach((item) => new Tabs(item));
-const maps = document.querySelector(".contact__map");
-new WOW().init();
+
+// Инициализация карты
 function initMap() {
   var coordinates = { lat: 48.828250, lng: 2.370778 },
   image = 'img/pointer-map.svg',
@@ -205,14 +207,12 @@ function initMap() {
       icon: image
     });
 }
-
 if(maps) {
   initMap();
 }
 
-
-
-var swiper = new Swiper('.swiper-container', {
+// Инициализация слайдера
+const swiper = new Swiper('.swiper-container', {
   effect: 'fade',
   centeredSlides: true,
   loop: true,
@@ -233,14 +233,10 @@ var swiper = new Swiper('.swiper-container', {
   },
 });
 
-
-const phones = document.querySelectorAll(`.field__input--phone`);
-const phoneOption = {
-  mask: '+{33} (0) 00-00-00-00'
-}
-
+// Инициализация маски для телефона
 phones.forEach((item) => IMask(item, phoneOption));
-const thx = document.querySelector(`.popup--thx`);
+
+// Ajax отправка формы
 $(".form").submit(function() { //Change
   var th = $(this);
   $.ajax({
@@ -257,7 +253,7 @@ $(".form").submit(function() { //Change
   return false;
 });
 
-
+// Плавная прокрутка до якоря
 $("a[href^='#']").click(function(){
   var _href = $(this).attr("href");
   $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
