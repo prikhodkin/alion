@@ -17,6 +17,10 @@
   height: 30px;
   border-radius: 50%;
 
+  &--disabled {
+    pointer-events: none;
+  }
+
   &--whatsapp {
     border: 0.5px solid #4caf50;
   }
