@@ -23,15 +23,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="preload" href="fonts/AvenirNextCyr-Regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/AvenirNextCyr-Bold.woff2" as="font" crossorigin>
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="page">
   <header class="header">
     <div class="header__wrap">
       <a class="header__logo logo">
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#logo__icon"></use>
-        </svg>
+        <img src="img/logo@header.png"  alt="">
       </a>
       <button class="header__toggle burger">
         <span class="burger__inner"><span class="visually-hidden">Открыть меню</span></span>
@@ -43,7 +41,7 @@
               <li class="nav__item"><a class="nav__link" href="#promo" >Accueil</a></li>
               <li class="nav__item"><a class="nav__link" href="#solutions" >Nos solutions</a></li>
               <li class="nav__item"><a class="nav__link" href="#integrations" >Intégration</a></li>
-              <li class="nav__item"><a class="nav__link" href="#contacts" >Retour d'information</a></li>
+              <li class="nav__item"><a class="nav__link" href="#contacts" >Contact</a></li>
             </ul>
           </nav>
           <a class="header__button button button--bord get-popup" data-popup="order" href="javascript://" >obtenir un devis</a>
@@ -158,7 +156,7 @@
                 </defs>
               </svg>
             </div>
-            <p class="place__text wow fadeIn" data-wow-delay="1.2s">Artisants et commerçants: bénéficiez d’une aide jusqu’à 1500 </p>
+            <p class="place__text wow fadeIn" data-wow-delay="1.2s">Artisants et commerçants: bénéficiez d’une aide jusqu’à 1500 €</p>
           </div>
         </li>
         <li class="promo__place place">
@@ -266,7 +264,7 @@
                   <a class="tariff__button button button--white get-popup" data-popup="order" href="javascript://" >Obtenir un devis</a>
                   <div class="tariff__inner">
                     <p class="tariff__desc">Reinségnez-vous <br> sur l’aide de la région</p>
-                    <a class="tariff__link get-popup" data-popup="order" href="javascript://">En savoir plus</a>
+                    <a class="tariff__link" target="_blank" href="https://www.iledefrance.fr/un-cheque-numerique-pour-des-commerces-connectes">En savoir plus</a>
                   </div>
                 </li>
               </ul>
@@ -356,7 +354,7 @@
                   <a class="tariff__button button button--white get-popup" data-popup="order" href="javascript://" >Obtenir un devis</a>
                   <div class="tariff__inner">
                     <p class="tariff__desc">Reinségnez-vous <br> sur l’aide de la région</p>
-                    <a class="tariff__link get-popup" data-popup="order" href="javascript://">En savoir plus</a>
+                    <a class="tariff__link" target="_blank" href="https://www.iledefrance.fr/un-cheque-numerique-pour-des-commerces-connectes">En savoir plus</a>
                   </div>
                 </li>
               </ul>
@@ -446,7 +444,7 @@
                   <a class="tariff__button button button--white get-popup" data-popup="order" href="javascript://" >Obtenir un devis</a>
                   <div class="tariff__inner">
                     <p class="tariff__desc">Reinségnez-vous <br> sur l’aide de la région</p>
-                    <a class="tariff__link get-popup" data-popup="order" href="javascript://">En savoir plus</a>
+                    <a class="tariff__link" target="_blank" href="https://www.iledefrance.fr/un-cheque-numerique-pour-des-commerces-connectes">En savoir plus</a>
                   </div>
                 </li>
               </ul>
@@ -536,8 +534,8 @@
                 </div>
               </div>
               <picture>
-                <source media="(min-width: 1200px)" type="image/webp" srcset="img/woman-with-phone@desktop.webp">
-                <source media="(min-width: 1200px)" srcset="img/woman-with-phone@desktop.jpg">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/woman-with-phone@desktop.webp">
+                <source media="(min-width: 768px)" srcset="img/woman-with-phone@desktop.jpg">
                 <source type="image/webp" srcset="img/woman-with-phone@mobile.webp">
                 <img class="integrations__image" src="img/woman-with-phone@mobile.jpg" alt="">
               </picture>
@@ -600,8 +598,8 @@
             </div>
             <div class="integrations__img integrations__img--delivery ">
               <picture>
-                <source media="(min-width: 1200px)" type="image/webp" srcset="img/man@desktop.webp">
-                <source media="(min-width: 1200px)" srcset="img/man@desktop.jpg">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/man@desktop.webp">
+                <source media="(min-width: 768px)" srcset="img/man@desktop.jpg">
                 <source type="image/webp" srcset="img/man@mobile.webp">
                 <img class="integrations__image" src="img/man@mobile.jpg" alt="">
               </picture>
@@ -618,15 +616,15 @@
           <li class="contact__item">
             <p class="contact__name contact__name--tel">Téléphones</p>
             <ul class="contact__sublist">
-              <li class="contact__subitem"><a class="contact__tel" href="tel:+33661317808">+33 6 61 31 78 08</a></li>
-              <li class="contact__subitem"><a class="contact__tel" href="tel:+33156370939">+33 1 56 37 09 39</a></li>
+              <li class="contact__subitem"><a class="contact__tel" href="tel:+33611448966">+ 33 6 11 44 89 66</a></li>
+              <li class="contact__subitem"><a class="contact__tel" href="tel:+33661317808">+ 33 6 61 31 78 08</a></li>
             </ul>
           </li>
           <li class="contact__item contact__item--mess">
             <p class="contact__name">Messagers</p>
             <ul class="contact__messagers messagers">
               <li class="messagers__item">
-                <a class="messagers__link" href="#">
+                <a class="messagers__link" href="https://t.me/yanovich_xyz">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="15" cy="15" r="14.75" stroke="#039BE5" stroke-width="0.5"/>
                     <g clip-path="url(#clip02)">
@@ -641,7 +639,7 @@
                 </a>
               </li>
               <li class="messagers__item">
-                <a class="messagers__link " href="#">
+                <a class="messagers__link " href="https://wa.me/33661317808">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="15" cy="15" r="14.75" stroke="#4CAF50" stroke-width="0.5"/>
                     <g clip-path="url(#clip03)">
@@ -657,7 +655,7 @@
                 </a>
               </li>
               <li class="messagers__item">
-                <a class="messagers__link " href="#">
+                <a class="messagers__link messagers__link--disabled " href="#" aria-disabled="true">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip04)">
                       <path d="M16.2003 7H12.7999C9.51859 7 6.84912 9.66947 6.84912 12.9508V15.5011C6.84912 17.8048 8.17771 19.8953 10.2496 20.8787V23.7188C10.2496 23.9654 10.558 24.0943 10.7333 23.9192L13.2006 21.4519H16.2003C19.4816 21.4519 22.1511 18.7824 22.1511 15.5011V12.9508C22.1511 9.66947 19.4816 7 16.2003 7Z" fill="#665CAC"/>
@@ -680,6 +678,7 @@
                 </a>
               </li>
             </ul>
+            <a href="mailto:contact@inalion.com" class="contact__mail">contact@inalion.com</a>
           </li>
           <li class="contact__item">
             <p class="contact__name">Adresse</p>
@@ -701,14 +700,13 @@
   </main>
   <footer class="footer">
     <a class="footer__logo logo" href="index.html">
-      <svg>
-        <use xlink:href="img/sprites/sprite.svg#logo__icon"></use>
-      </svg>
+      <img src="img/logo@footer.png" alt="">
     </a>
     <ul class="footer__list">
       <li class="footer__item"><a class="footer__link" target="_blank" href="politique.html">Politique de confidélité</a></li>
       <li class="footer__item"><a class="footer__link" target="_blank" href="mentions.html">Mentions Légales</a></li>
       <li class="footer__item"><a target="_blank" class="footer__link" href="vendor/cgu_inalion.docx">CGU et offre promotionnelle</a></li>
+      <li class="footer__item"><a target="_blank" class="footer__link" href="/rse">RSE</a></li>
     </ul>
     <div class="footer__wrap">
       <p class="footer__copyright">Copyright © 2020 Alion | All rights reserved.</p>
@@ -722,7 +720,7 @@
           <h2 class="modal__title title">Formulaire</h2>
           <form class="modal__form form">
             <input type="hidden" name="project_name" value="Alion">
-            <input type="hidden" name="admin_email" value="prikhodkin_ilya@mail.ru">
+            <input type="hidden" name="admin_email" value="contact@inalion.com">
             <input type="hidden" name="form_subject" value="Alion">
             <fieldset class="form__wrap">
               <div class="form__box field ">
@@ -804,7 +802,7 @@
     </div>
   </section>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzzhXIcTFu20j716t6pPG2CahRgI9uWOM"></script>
-  <script src="js/vendor.min.js"></script>
-  <script src="js/general.min.js"></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/general.js"></script>
 </body>
 </html>
