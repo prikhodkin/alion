@@ -7,8 +7,7 @@
 }
 
 .footer__logo {
-  width: 82px;
-  height: 25px;
+  width: 125px;
   margin-bottom: 20px;
 
   & svg {
@@ -85,22 +84,23 @@
 @media (min-width: 1200px) {
   .footer {
     @include page-wrapper;
-    justify-content: inherit;
+    justify-content: space-between;
   }
 
-  .footer__logo {
-    width: 76px;
-  }
+
 
   .footer__list {
-    margin-left: auto;
+    margin-left: unset;
+  }
+
+
+  .footer__wrap {
+    margin-left: unset;
+    width: auto;
   }
 
   .footer__link {
     line-height: 15px;
   }
 
-  .footer__copyright {
-    margin-left: 215px;
-  }
 }
