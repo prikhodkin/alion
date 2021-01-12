@@ -19,6 +19,7 @@
 .integrations__box {
   &--payment {
     margin-top: -85px;
+    z-index: 1000;
   }
 }
 
@@ -148,6 +149,7 @@
 
     &:nth-child(3) {
       margin-top: -100px;
+
       padding-right: calc(50% - 585px);
 
       .integrations__box {
@@ -155,6 +157,7 @@
         z-index: 100;
         min-width: 545px;
         margin-left: -120px;
+        padding-right: 90px;
       }
     }
 
@@ -292,6 +295,12 @@
             transform: translateX(100%) rotate(-15.1deg);
           }
         }
+      }
+    }
+
+    &:nth-child(3) {
+      .integrations__box {
+        padding-right: 0;
       }
     }
   }
